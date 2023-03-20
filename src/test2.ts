@@ -5,7 +5,7 @@ interface current {
     balance(bankname:string,acctype:string): any;
 }
 
-class account implements savings{
+class account implements savings,current{
 bankname:string;
 acctype:string;
 
@@ -22,27 +22,28 @@ acctype:string;
 
 let j = new account("kvb","savings");
 j.balance();
-
-
-
-class account1 implements savings{
-    bankname:string;
-    acctype:string;
     
-        constructor(bank_name: string, acc_type: string) {
-            this.bankname=bank_name;
-            this.acctype=acc_type;
-        }
+let f = new account("kvb","current");
+f.balance();
+
+
+
+
+// class account1 implements savings{
+//     bankname:string;
+//     acctype:string;
     
-        balance(): any{
-            console.log("the account name is "+this.bankname+"account type is"+this.acctype);
-        }
-    }
+//         constructor(bank_name: string, acc_type: string) {
+//             this.bankname=bank_name;
+//             this.acctype=acc_type;
+//         }
+    
+//         balance(): any{
+//             console.log("the account name is "+this.bankname+"account type is"+this.acctype);
+//         }
+//     }
      
-    
-    let f = new account1("kvb","current");
-    f.balance();
-    
+
 
 
 
