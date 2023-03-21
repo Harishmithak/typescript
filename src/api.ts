@@ -15,11 +15,11 @@ function getproduct(): Promise<product[]>{
 }
 getproduct();
 
-getproduct()
-    .then(function (users) {
+//getproduct()
+    //.then(function (users) {
     //map- to loop through all the elements from the json
-    console.log(users.map(function (u) { return  + ' ' ++ '\n'; }).toString());
-})
+   // console.log(users.map(function (u) { return  + ' ' ++ '\n'; }).toString());
+//})
 fetch('https://fakestoreapi.com/products/1')
             .then(res=>res.json())
             .then(json=>console.log(json))
